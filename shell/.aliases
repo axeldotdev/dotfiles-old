@@ -76,6 +76,14 @@ alias puf='vendor/bin/phpunit --filter'
 
 alias jest='./node_modules/.bin/jest'
 
+# PHPStan
+
+alias phpstan='vendor/bin/phpstan analyse'
+
+# Psalm
+
+alias psalm='vendor/bin/psalm'
+
 ## Laravel
 
 alias lrn='laravel new'
