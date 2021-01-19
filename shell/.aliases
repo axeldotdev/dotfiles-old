@@ -38,7 +38,7 @@ alias gf='git fetch'
 alias gs='git stash'
 alias gt='git tag -a'
 
-alias wip='git add . && git comit -m "wip"'
+alias wip='git add . && git commit -m "wip"'
 alias fix='git add . && git commit -m "fix"'
 
 alias nah='git reset --hard && git clean -df'
