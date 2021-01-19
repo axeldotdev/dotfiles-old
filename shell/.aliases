@@ -1,0 +1,125 @@
+alias lab='cd ~/projects'
+
+alias clr='clear'
+alias ls='ls -1 -G'
+alias la='ls -a'
+alias ll='ls -l'
+alias hostfile='sudo vim /etc/hosts'
+alias sshconfig='vim ~/.ssh/config'
+alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
+
+# IP addresses
+alias ip="curl https://diagnostic.opendns.com/myip ; echo"
+alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# Editor
+
+alias sb='subl .'
+alias cc='code .'
+alias pp='pstorm .'
+
+# Git
+
+alias gi='git init'
+alias gst='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit -m'
+alias gb='git branch'
+alias gk='git checkout'
+alias gkm='git checkout master'
+alias gkd='git checkout develop'
+alias gp='git push'
+alias gm='git merge'
+alias gmm='git merge master'
+alias gmd='git merge develop'
+alias gl='git pull'
+alias gf='git fetch'
+alias gs='git stash'
+alias gt='git tag -a'
+
+alias wip='git add . && git comit -m "wip"'
+alias fix='git add . && git commit -m "fix"'
+
+alias nah='git reset --hard && git clean -df'
+
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+## Deployer
+
+alias dt='dep deploy test'
+alias ds='dep deploy staging'
+alias dp='dep deploy prod'
+alias dk='dep deploy:unlock'
+
+## Composer
+
+alias ci='composer install'
+alias cr='composer require'
+alias cu='composer update'
+alias cda='composer dumpautoload'
+
+## NPM
+
+alias ni='npm install'
+alias nu='npm update'
+alias nw='npm run watch'
+alias nd='npm run dev'
+alias np='npm run prod'
+
+## PHPUnit
+
+alias pu='vendor/bin/phpunit'
+alias puf='vendor/bin/phpunit --filter'
+
+# Jest
+
+alias jest='./node_modules/.bin/jest'
+
+## Laravel
+
+alias lrn='laravel new'
+
+alias artisan='php artisan'
+
+alias a='php artisan'
+alias am='php artisan migrate'
+alias aw='php artisan db:wipe'
+alias ar='php artisan migrate:refresh'
+alias ak='php artisan key:generate'
+alias as='php artisan storage:link'
+
+alias atk='php artisan tinker'
+
+alias at='php artisan test'
+alias atg='php artisan test --group'
+
+
+## Laravel Sail
+
+alias sail='bash vendor/bin/sail'
+
+alias ss='sail shell'
+
+alias sci='sail composer install'
+alias scu='sail composer update'
+alias scr='sail composer require'
+
+alias sni='sail npm install'
+alias snu='sail npm update'
+alias snd='sail npm run dev'
+alias snw='sail npm run watch'
+
+alias sa='sail artisan'
+alias sam='sail artisan migrate'
+alias saw='sail artisan db:wipe'
+alias sar='sail artisan migrate:refresh'
+alias sak='sail artisan key:generate'
+alias sal='sail artisan storage:link'
+
+alias stk='sail tinker'
+
+alias st='sail test'
+alias stg='sail test --group'
+alias spu='sail vendor/bin/phpunit'
+alias spuf='sail vendor/bin/phpunit --filter'

@@ -1,0 +1,29 @@
+# Extensions
+
+- Alpine.js IntelliSense by Adrian Wilczynski
+- Better Jest by CoachRichbart
+- Bettr PHPUnit ny Caleb Porzio
+- Docker by Microsoft
+- DotEnv by mikestead
+- Duplicate action by mrmlnc
+- EditorConfig for VS Code by EditorConfig
+- GraphQL by GraphQL Foundation
+- Laravel Artisan by Ryan Naddy
+- Laravel Blade Snippet by Winnie Lin
+- Laravel Blade Snippet by Austen Cameron
+- Laravel Docs by Austen Cameron
+- Laravel Extra Intellisense by amir
+- laravel-blade by Christian Howe
+- Live Share by Microsoft
+- Live Share Audio by Microsoft
+- Livewire Language Support by cierra
+- Palenight Theme by Olaolu Olawuyi
+- php cs fixer by junstyle
+- PHP Intelephense by Ben Mewburn
+- PHP Namespace Resolver by Mehedi Hassan
+- Prettier - Code formatter by Prettier
+- Prettify JSON by Mohsen Azimi
+- Tailwind CSS IntelliSense by Brad Cornes
+- Toggle by Peng Lv
+- Vetur by Pine Wu
+- Vue VSCode Snippets by sarah.drasner
