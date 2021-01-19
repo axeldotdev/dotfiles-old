@@ -50,7 +50,3 @@ fpath=($fpath "/home/axel/.zfunctions")
 
 autoload -U promptinit; promptinit
 prompt spaceship
-
-# Move into WSL home folder
-
-cd /home/axel
