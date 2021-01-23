@@ -45,21 +45,21 @@ alias nah='git reset --hard && git clean -df'
 
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-## Deployer
+# Deployer
 
 alias dt='dep deploy test'
 alias ds='dep deploy staging'
 alias dp='dep deploy prod'
 alias dk='dep deploy:unlock'
 
-## Composer
+# Composer
 
 alias ci='composer install'
 alias cr='composer require'
 alias cu='composer update'
 alias cda='composer dumpautoload'
 
-## NPM
+# NPM
 
 alias ni='npm install'
 alias nu='npm update'
@@ -67,7 +67,7 @@ alias nw='npm run watch'
 alias nd='npm run dev'
 alias np='npm run prod'
 
-## PHPUnit
+# PHPUnit
 
 alias pu='vendor/bin/phpunit'
 alias puf='vendor/bin/phpunit --filter'
@@ -84,7 +84,11 @@ alias phpstan='vendor/bin/phpstan analyse'
 
 alias psalm='vendor/bin/psalm'
 
-## Laravel
+# Envoy
+
+alias envoy='vendor/bin/envoy'
+
+# Laravel
 
 alias lrn='laravel new'
 
@@ -103,7 +107,7 @@ alias at='php artisan test'
 alias atg='php artisan test --group'
 
 
-## Laravel Sail
+# Laravel Sail
 
 alias sail='bash vendor/bin/sail'
 
