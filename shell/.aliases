@@ -71,6 +71,7 @@ alias np='npm run prod'
 
 alias pu='vendor/bin/phpunit'
 alias puf='vendor/bin/phpunit --filter'
+alias pest='vendor/bin/pest'
 
 # Jest
 
