@@ -6,7 +6,8 @@ alias la='ls -a'
 alias ll='ls -l'
 alias hostfile='sudo vim /etc/hosts'
 alias sshconfig='vim ~/.ssh/config'
-alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
+alias copykey='cat ~/.ssh/id_rsa.public | pbcopy'
+alias showkey='cat ~/.ssh/id_rsa.public'
 
 # IP addresses
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
@@ -20,6 +21,7 @@ alias pp='pstorm .'
 
 # Git
 
+alias ggp='git config --global user.email axel.charpentier@hey.com'
 alias gi='git init'
 alias gst='git status'
 alias ga='git add'
