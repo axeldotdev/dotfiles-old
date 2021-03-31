@@ -4,6 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+export PATH=$HOME/.npm-global/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 
 export ZSH="/home/axel/.oh-my-zsh"
@@ -46,9 +48,8 @@ for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
 done
 unset file
 
-# Set Spaceship Zsh as a prompt
-
 fpath=($fpath "/home/axel/.zfunctions")
 
+# Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
