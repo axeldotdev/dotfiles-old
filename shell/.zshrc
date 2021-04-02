@@ -4,6 +4,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
 export PATH=$HOME/.npm-global/bin:$PATH
 
 # Path to your oh-my-zsh installation.
