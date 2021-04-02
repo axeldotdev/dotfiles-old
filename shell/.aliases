@@ -21,7 +21,7 @@ alias pp='pstorm .'
 
 # Git
 
-alias ggp='git config --global user.name axeldotdev && git config --global user.email axel.charpentier@hey.com'
+alias gpp='git config --global user.name "axeldotdev" && git config --global user.email axel.charpentier@hey.com'
 alias gi='git init'
 alias gst='git status'
 alias ga='git add'
