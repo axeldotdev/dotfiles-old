@@ -38,6 +38,7 @@ SPACESHIP_TIME_SHOW='true'
 SPACESHIP_USER_SHOW='always'
 SPACESHIP_NODE_SHOW='false'
 SPACESHIP_VI_MODE_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
 
 # Load the shell dotfiles, and then some:
 # * ~/.dotfiles-custom can be used for other settings you don’t want to commit.
