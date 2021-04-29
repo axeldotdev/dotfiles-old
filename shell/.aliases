@@ -1,4 +1,6 @@
-alias lab='cd ~/projects'
+alias projects='cd ~/projects'
+alias lab='cd ~/lab'
+alias win='cd /mnt/c/Users/Axel'
 
 alias php74='sudo update-alternatives --set php /usr/bin/php7.4'
 alias php80='sudo update-alternatives --set php /usr/bin/php8.0'
