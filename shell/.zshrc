@@ -17,7 +17,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Zsh Theme
 
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 HIST_STAMPS='dd/mm/yyyy'
 
 # Zsh Autocomplete
@@ -52,7 +52,10 @@ done
 unset file
 
 fpath=($fpath "/home/axel/.zfunctions")
+fpath=($fpath "/home/axel/.zfunctions")
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+cd $HOME
