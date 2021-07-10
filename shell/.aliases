@@ -88,6 +88,10 @@ alias jest='./node_modules/.bin/jest'
 
 alias phpstan='vendor/bin/phpstan analyse'
 
+# PHPInsights
+
+alias phpinsights='vendor/bin/phpinsights'
+
 # Patrol
 
 alias patrol='vendor/bin/patrol'
