@@ -1,9 +1,11 @@
-alias projects='cd ~/projects'
+alias pro='cd ~/projects'
 alias lab='cd ~/lab'
 alias win='cd /mnt/c/Users/Axel'
 
-alias php74='sudo update-alternatives --set php /usr/bin/php7.4'
-alias php80='sudo update-alternatives --set php /usr/bin/php8.0'
+# alias php74='sudo update-alternatives --set php /usr/bin/php7.4'
+# alias php80='sudo update-alternatives --set php /usr/bin/php8.0'
+alias php74='brew unlink php@8.0 && brew link php@7.4'
+alias php80='brew unlink php@7.4 && brew link php@8.0'
 
 alias clr='clear'
 alias ls='ls -1 -G'
@@ -19,13 +21,12 @@ alias ip="curl https://diagnostic.opendns.com/myip ; echo"
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Editor
-
 alias sb='subl .'
 alias cc='code .'
 alias pp='pstorm .'
 
 # Git
-
+alias gpa='git config --global user.name "Axel Charpentier" && git config --global user.email axelc@ayctor.com'
 alias gpp='git config --global user.name "axeldotdev" && git config --global user.email axel.charpentier@hey.com'
 alias gi='git init'
 alias gst='git status'
@@ -44,30 +45,41 @@ alias gl='git pull'
 alias gf='git fetch'
 alias gs='git stash'
 alias gt='git tag -a'
-
 alias wip='git add . && git commit -m "wip"'
 alias fix='git add . && git commit -m "fix"'
-
 alias nah='git reset --hard && git clean -df'
-
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+comme () {
+    git add --all
+    if (($# > 1))
+    then
+        params=''
+        for i in $*
+        do
+            params=" $params $i"
+        done
+        git commit -m "$params"
+    else
+        git commit -m "$1"
+    fi
+}
 
 # Deployer
-
 alias dt='dep deploy test'
 alias ds='dep deploy staging'
 alias dp='dep deploy prod'
 alias dk='dep deploy:unlock'
 
 # Composer
-
 alias ci='composer install'
 alias cr='composer require'
 alias cu='composer update'
 alias cda='composer dumpautoload'
+composer-link() {
+    composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+}
 
 # NPM
-
 alias ni='npm install'
 alias nu='npm update'
 alias nw='npm run watch'
@@ -75,78 +87,59 @@ alias nd='npm run dev'
 alias np='npm run prod'
 
 # PHPUnit
-
 alias pu='vendor/bin/phpunit'
 alias puf='vendor/bin/phpunit --filter'
 alias pest='vendor/bin/pest'
 
 # Jest
-
 alias jest='./node_modules/.bin/jest'
 
 # PHPStan
-
 alias phpstan='vendor/bin/phpstan analyse'
 
 # PHPInsights
-
 alias phpinsights='vendor/bin/phpinsights'
 
 # Patrol
-
 alias patrol='vendor/bin/patrol'
 
 # Psalm
-
 alias psalm='vendor/bin/psalm'
 
 # Envoy
-
 alias envoy='vendor/bin/envoy'
 
 # Laravel
-
 alias lrn='laravel new'
-
 alias artisan='php artisan'
-
+alias art='php artisan'
 alias a='php artisan'
 alias am='php artisan migrate'
 alias aw='php artisan db:wipe'
 alias ar='php artisan migrate:refresh'
 alias ak='php artisan key:generate'
 alias as='php artisan storage:link'
-
 alias atk='php artisan tinker'
-
 alias at='php artisan test'
 alias atg='php artisan test --group'
 
-
 # Laravel Sail
-
 alias sail='bash vendor/bin/sail'
-
 alias ss='sail shell'
-
 alias sci='sail composer install'
 alias scu='sail composer update'
 alias scr='sail composer require'
-
 alias sni='sail npm install'
 alias snu='sail npm update'
 alias snd='sail npm run dev'
 alias snw='sail npm run watch'
-
 alias sa='sail artisan'
 alias sam='sail artisan migrate'
 alias saw='sail artisan db:wipe'
 alias sar='sail artisan migrate:refresh'
 alias sak='sail artisan key:generate'
 alias sal='sail artisan storage:link'
-
 alias stk='sail tinker'
-
 alias st='sail test'
 alias stg='sail test --group'
 alias spu='sail vendor/bin/phpunit'

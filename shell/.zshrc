@@ -10,7 +10,7 @@ export PATH=$HOME/.npm-global/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 
-export ZSH="/home/axel/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -51,11 +51,10 @@ for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
 done
 unset file
 
-fpath=($fpath "/home/axel/.zfunctions")
-fpath=($fpath "/home/axel/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 
-cd $HOME
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
