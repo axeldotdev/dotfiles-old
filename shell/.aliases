@@ -16,6 +16,13 @@ alias sshconfig='vim ~/.ssh/config'
 alias copykey='cat ~/.ssh/id_rsa.public | pbcopy'
 alias showkey='cat ~/.ssh/id_rsa.public'
 
+# Bowsers
+alias browse="open 'http://localhost'"
+alias chrome="open -a 'Google Chrome'"
+alias firefox="open -a 'Firefox'"
+alias safari="open -a 'Safari'"
+alias edge="open -a 'Microsoft Edge'"
+
 # IP addresses
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
@@ -49,6 +56,7 @@ alias wip='git add . && git commit -m "wip"'
 alias fix='git add . && git commit -m "fix"'
 alias nah='git reset --hard && git clean -df'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 comme () {
     git add --all
     if (($# > 1))

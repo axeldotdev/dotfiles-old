@@ -1,12 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/bin:/usr/local/bin"
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
-export PATH=$HOME/.npm-global/bin:$PATH
+export PATH="$PATH:$HOME/.npm-global/bin"
 
 # Path to your oh-my-zsh installation.
 
