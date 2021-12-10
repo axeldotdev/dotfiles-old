@@ -1,9 +1,6 @@
 alias pro='cd ~/projects'
 alias lab='cd ~/lab'
-alias win='cd /mnt/c/Users/Axel'
 
-# alias php74='sudo update-alternatives --set php /usr/bin/php7.4'
-# alias php80='sudo update-alternatives --set php /usr/bin/php8.0'
 alias php74='brew unlink php@8.0 && brew link php@7.4'
 alias php80='brew unlink php@7.4 && brew link php@8.0'
 
@@ -34,7 +31,7 @@ alias pp='pstorm .'
 
 # Git
 alias gpa='git config --global user.name "Axel Charpentier" && git config --global user.email axelc@ayctor.com'
-alias gpp='git config --global user.name "axeldotdev" && git config --global user.email axel.charpentier@hey.com'
+alias gpp='git config --global user.name "axeldotdev" && git config --global user.email axelcharpentier0@icloud.com'
 alias gi='git init'
 alias gst='git status'
 alias ga='git add'
